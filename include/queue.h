@@ -4,6 +4,9 @@
 #include <stdio.h> 
 #include <stdlib.h>
 
+/* This is the header file for all things queue
+ * */
+
 // A function that returns generic memory.
 void *memory()
 {
@@ -21,15 +24,5 @@ typedef struct Node
     struct Node *next; 
 } queue_t;
 
-/*
-void queue_init()
-{
-    queue_t q;
-    queue_t *queue = NULL;
-    queue_t *queue = &q;
-
-    return queue;
-}
-*/
 
 #endif
