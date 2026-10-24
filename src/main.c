@@ -7,22 +7,22 @@
 
 int main(int argc, char **argv)
 {
-    // queue_t *queue = (queue_t *)memory();
-    unsigned int *queue = que_init(10); // <= set the size of the queue.
-    queue_array_init(10);  
+    const int array_size = 10;
+    int i = 0;
 
-    // insert items into the queue
+    munit_assert_int(array_size, ==, 10);
+
+    unsigned int *queue = que_init(10); // <= set the size of the queue.
+
     que_insert(queue, 892);
 
     printf("\npeek -> [ %d ]\n", que_peek(queue));
 
-    que_insert(queue, 100);
-    que_insert(queue, 200);
-    que_insert(queue, 300);
-    que_insert(queue, 400);
-    que_insert(queue, 500);
-    que_insert(queue, 600);
-    que_insert(queue, 700);
+    do
+    {
+        que_insert(queue, (i * 12));
+        i++;
+    } while(i < (array_size - 1)); // one was added above, was causing overflow
 
     return 0;
 }
