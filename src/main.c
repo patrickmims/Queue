@@ -3,12 +3,14 @@
 #include <string.h>
 
 #include "cs.h" 
+#include "munit.h"
 #include "queue.h"
 
-int main(int argc, char **argv )
+int main(int argc, char **argv)
 {
     // queue_t *queue = (queue_t *)memory();
     unsigned int *queue = que_init(10); // <= set the size of the queue.
+    queue_array_init(10);  
 
     // insert items into the queue
     que_insert(queue, 892);

@@ -14,7 +14,9 @@ include_directories(${PROJECT_SOURCE_DIR})
 
 add_executable(${PROJECT_NAME} 
     ${SRC}/main.c
+    ${SRC}/munit.c
     ${SRC}/queue/queue.c
+    ${SRC}/queue/array_queue.c
 )
 
 target_link_libraries(${PROJECT_NAME}

@@ -8,7 +8,8 @@
  * */
 
 // A function that returns generic memory.
-void *memory()
+/*
+void *new_memory()
 {
     void *memory = NULL;
 
@@ -17,6 +18,7 @@ void *memory()
 
     return memory;
 }
+*/
 
 typedef struct Node 
 {
@@ -24,5 +26,12 @@ typedef struct Node
     struct Node *next; 
 } queue_t;
 
+void queue_array_init();
+/*
+int queue_array_insert_node();
+int queue_array_peek();
+void queue_array_delete();
+void queue_array_display()
+*/
 
 #endif
